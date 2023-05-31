@@ -9,13 +9,29 @@ public class RecogidaDatos {
     public int id;
 
 
-    public RecogidaDatos(int id, String producto, String color, String talla) {
+    public RecogidaDatos(String producto, String color, String talla) {
    	 this.producto=producto;
    	 this.color=color;
    	 this.talla=talla;
     }
-
-
+	public String getProducto(){
+		return producto;
+	}
+	public void setProducto(String producto) {
+        this.producto = producto;
+    }
+	public String getColor(){
+		return color;
+	}
+	public void setColor(String color) {
+        this.color = color;
+    }
+	public String getTalla(){
+		return talla;
+	}
+	public void setTalla(String talla) {
+        this.talla = talla;
+    }
 
 
     public void errorMenu(int opcion, int opciones) {
