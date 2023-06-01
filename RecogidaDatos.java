@@ -6,11 +6,21 @@ public class RecogidaDatos {
 	public String color;
 	public String talla;
 	public int id;
+	Modifica container = new Modifica();
 
-	public RecogidaDatos(String producto, String color, String talla) {
+	public RecogidaDatos(int id,String producto, String color, String talla) {
+		this.id=id;
 		this.producto = producto;
 		this.color = color;
 		this.talla = talla;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getProducto() {
@@ -62,23 +72,23 @@ public class RecogidaDatos {
 		return opcion;
 	}
 
-	public int menuAdministrar() {
+	public int menuAdministrar(boolean vacio) {
 		Scanner scanner = new Scanner(System.in);
-		Modifica container = new Modifica();
+		
 		cent = false;
 		int opciones = 3;
 		int opcion = 0;
-		boolean vacio=container.ArraylistVacio();
-		if (vacio==false){
-		while (cent == false) {
-			System.out.println("\n¿Qué quieres hacer?:");
-			System.out.println("1.Mostrar");
-			System.out.println("2.Modificar un pedido");
-			System.out.println("3.Eliminar pedido");
-			System.out.print("Ingresa la opción: ");
-			opcion = scanner.nextInt();
-			errorMenu(opcion, opciones);
-		}}
+		if (vacio == false) {
+			while (cent == false) {
+				System.out.println("\n¿Qué quieres hacer?:");
+				System.out.println("1.Mostrar");
+				System.out.println("2.Modificar un pedido");
+				System.out.println("3.Eliminar pedido");
+				System.out.print("Ingresa la opción: ");
+				opcion = scanner.nextInt();
+				errorMenu(opcion, opciones);
+			}
+		}
 		return opcion;
 	}
 
