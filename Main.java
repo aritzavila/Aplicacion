@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         Modifica container = new Modifica();
@@ -11,11 +10,11 @@ public class Main {
                     container.Añadir(menus.menuProducto(), menus.menuColor(), menus.menuTalla());
                     break;
                 case 2:
-                if (pedidos.isEmpty()) {
                     int opcion2=menus.menuAdministrar();
                     if(opcion2==1){container.Mostrar();}
                     else if(opcion2==2){container.Actualizar();}
-                    else{container.Eliminar();}
+                    else if(opcion2==3){container.Eliminar();}
+                    else{System.out.println("No tienes pedidos");}
                     break;
                 case 3:
                     System.out.println("Compra finalizada");
@@ -28,3 +27,4 @@ public class Main {
         }
     }
 }
+

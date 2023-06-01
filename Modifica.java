@@ -56,14 +56,11 @@ public class Modifica {
 			}
 		}
 	}
-
-	public static void main(String[] args) {
-		Modifica container = new Modifica();
-		RecogidaDatos menus = new RecogidaDatos("", "", "");
-		container.Añadir(menus.menuProducto(), menus.menuColor(), menus.menuTalla());
-		container.Mostrar();
-		container.Actualizar();
-		container.Mostrar();
+	public boolean ArraylistVacio(){
+		boolean vacio=false;
+		if (pedidos.isEmpty()) {
+			vacio=true;
 	}
-
+	return vacio;
+}
 }

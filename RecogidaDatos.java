@@ -64,9 +64,12 @@ public class RecogidaDatos {
 
 	public int menuAdministrar() {
 		Scanner scanner = new Scanner(System.in);
+		Modifica container = new Modifica();
 		cent = false;
 		int opciones = 3;
 		int opcion = 0;
+		boolean vacio=container.ArraylistVacio();
+		if (vacio==false){
 		while (cent == false) {
 			System.out.println("\n¿Qué quieres hacer?:");
 			System.out.println("1.Mostrar");
@@ -75,7 +78,7 @@ public class RecogidaDatos {
 			System.out.print("Ingresa la opción: ");
 			opcion = scanner.nextInt();
 			errorMenu(opcion, opciones);
-		}
+		}}
 		return opcion;
 	}
 
